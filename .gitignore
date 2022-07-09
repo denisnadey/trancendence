@@ -1,6 +1,8 @@
 # compiled output
 /dist
 /node_modules
+/docker_compose/pgdata
+/docker_compose/pgadmin
 
 # Logs
 logs
