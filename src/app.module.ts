@@ -1,7 +1,8 @@
-import { Module } from '@nestjs/common';
+import { Get, Module, Res } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { TodoModule } from './todo/todo.module';
 
 @Module({
   controllers: [AppController],
@@ -17,6 +18,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       entities: [],
       synchronize: true,
     }),
+    TodoModule,
   ],
 })
 export class AppModule {}
